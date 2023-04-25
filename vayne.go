@@ -1,13 +1,15 @@
 package Vayne
 
 type TestVayne struct {
-	FilePath string
+	ConfigPath string
+	FilePath   string
 }
 
 // NewVayne constructor
-func NewVayne(filePath string) *TestVayne {
+func NewVayne(configPath, filePath string) *TestVayne {
 	return &TestVayne{
-		FilePath: filePath,
+		FilePath:   filePath,
+		ConfigPath: configPath,
 	}
 }
 

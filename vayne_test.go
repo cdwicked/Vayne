@@ -8,7 +8,7 @@ import (
 func TestNewVayne(t *testing.T) {
 	Convey("NewVayne", t, func() {
 		Convey("success", func() {
-			nv := NewVayne("./mock/file.yaml")
+			nv := NewVayne("./mock/file.yaml", "./mock/file.yaml")
 			So(nv, ShouldNotBeNil)
 		})
 	})
