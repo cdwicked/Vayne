@@ -9,10 +9,10 @@ func TestGetMap(t *testing.T) {
 	Convey("GetMap", t, func() {
 		Convey("nil", func() {
 			a := GetMap()
-			So(a, ShouldBeNil)
+			So(len(a), ShouldEqual, 0)
 		})
 		Convey("not nil", func() {
-			e := readConfig("./mock/file.yaml")
+			e := ReadMacroConfig("./mock/file.yaml")
 			So(e, ShouldBeNil)
 			a := GetMap()
 			So(a, ShouldNotBeNil)
@@ -23,7 +23,7 @@ func TestGetMap(t *testing.T) {
 func Test_readConfig(t *testing.T) {
 	Convey("readConfig", t, func() {
 		Convey("success", func() {
-			a := readConfig("./mock/file.yaml")
+			a := ReadMacroConfig("./mock/file.yaml")
 			So(a, ShouldBeNil)
 		})
 	})

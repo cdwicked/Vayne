@@ -7,11 +7,16 @@ import (
 
 var globalMap map[string]string
 
+// GetMap get macro config
 func GetMap() map[string]string {
+	if globalMap == nil {
+		return make(map[string]string, 0)
+	}
 	return globalMap
 }
 
-func readConfig(configPath string) error {
+// ReadMacroConfig read file
+func ReadMacroConfig(configPath string) error {
 	cp, err := os.ReadFile(configPath)
 	if err != nil {
 		return err
