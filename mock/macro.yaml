@@ -1,0 +1,2 @@
+baseurl: ${.values.baseurl}
+test: ${.values.test}

@@ -1,18 +1,15 @@
-package Vayne
+package main
 
-type TestVayne struct {
-	ConfigPath string
-	FilePath   string
-}
+import (
+	"github.com/urfave/cli"
+	"log"
+)
 
-// NewVayne constructor
-func NewVayne(configPath, filePath string) *TestVayne {
-	return &TestVayne{
-		FilePath:   filePath,
-		ConfigPath: configPath,
-	}
-}
+func main() {
+	log.Printf("vayne attack")
+	app := cli.NewApp()
+	app.Name = "vayne"
+	app.Usage = "ATE- AutoTest"
+	app.Version = "1.0.0"
 
-func (n *TestVayne) Process() bool {
-	return true
 }
