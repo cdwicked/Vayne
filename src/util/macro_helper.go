@@ -1,7 +1,6 @@
 package util
 
 import (
-	"gopkg.in/yaml.v3"
 	"os"
 	"strings"
 )

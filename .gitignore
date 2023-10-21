@@ -24,4 +24,4 @@ go.work
 .idea
 
 # go.sum
-go.sum
+src/go.sum

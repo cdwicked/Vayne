@@ -1,7 +1,6 @@
 package util
 
 import (
-	. "github.com/smartystreets/goconvey/convey"
 	"log"
 	"testing"
 )
